@@ -8,5 +8,4 @@
   - name: create dir
     file:
       state: directory
-      directory: true
       path: /root/ansible-worked
