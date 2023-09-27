@@ -15,12 +15,3 @@
       state: started
       enabled: true
       name: qemu-guest-agent
-
-  - name: Ensure Default User is created
-    user:
-      name: mgarris
-      comment: Mike G
-      shell: /bin/bash
-      home: /home/mgarris
-      create_home: true
-      password: 4096$KISJ/bgGwK8p0AEG$KtIhUYdAYxiU30NsSacblNyKI4kdN.09qBEOietvhc.vqelNf5pPGEDtaNuPGC5J0ll4ZajpunqDM0U9QWY6./
