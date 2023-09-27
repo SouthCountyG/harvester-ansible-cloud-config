@@ -1,9 +1,12 @@
 ---
-- hosts: localhost
+- hosts: 127.0.0.1
   connection: local
   become: true
   gather_facts: false
   tasks:
 
-  - name: Create file
-    command: mkdir /root/testansible
+  - name: Create directory
+    file:
+      path: /root/ansible_worked
+      state: directory
+      mode: '0700'
