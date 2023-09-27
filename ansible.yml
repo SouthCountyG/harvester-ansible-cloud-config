@@ -17,7 +17,7 @@
       state: latest
 
   - name: ensure qemu is running
-    systemd_service:
+    systemd:
       state: started
       name: qemu-guest-agent
       enabled: true
