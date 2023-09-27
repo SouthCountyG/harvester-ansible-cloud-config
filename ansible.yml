@@ -5,13 +5,8 @@
   gather_facts: false
   tasks:
 
-  - name: Install Required Packages
-    package:
-      - qemu-guest-agent
-      - net-tools
-
-  - name: Ensure QEMU is running
-    systemd_service:
-      state: started
-      enabled: true
-      name: qemu-guest-agent
+  - name: create dir
+    file:
+      state: present
+      directory: true
+      path: /root/ansible-worked
