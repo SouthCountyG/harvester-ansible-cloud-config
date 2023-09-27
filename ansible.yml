@@ -9,3 +9,15 @@
     file:
       state: directory
       path: /root/ansible-worked
+
+  - name: install packages
+    package:
+      name:
+        - qemu-guest-agent
+      state: latest
+
+  - name: ensure qemu is running
+    systemmd_service:
+      state: started
+      name: qemu-guest-agent
+      enabled: true
