@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+  gather_facts: false
+  tasks:
+
+  - name: Audit Policy
+    copy: 
+      src: audit-policy.yaml
+      dest: /etc/rancher/rke2/audit-policy.yaml
+      owner: root
+      group: root
+  
+  - name: RKE2 Config
+    copy:
+      src: config.yaml
+      dest: /etc/rancher/rke2/config.yaml
+      owner: root
+      group: root
+      
