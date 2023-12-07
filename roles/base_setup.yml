@@ -1,0 +1,13 @@
+---
+  - name: create dir
+    file:
+      state: directory
+      path: /root/ansible-worked
+
+  - name: see if it is cloning
+    copy:
+      src: cloud-init-test
+      dest: /root/ansible-worked
+      owner: root
+      group: root
+      mode: '0644'

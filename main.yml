@@ -5,4 +5,5 @@
   become: true
   gather_facts: false
   tasks:
-  
+  - include_role:
+      name: base_setup
