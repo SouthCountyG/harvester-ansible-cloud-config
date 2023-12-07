@@ -1,4 +1,16 @@
 ---
+  - name: Create Rancher dir
+    file:
+      path: /etc/rancher
+      state: directory
+      mode: '0755'
+
+  - name: Create rke2 dir
+    file:
+      path: /etc/rancher/rke2
+      state: directory
+      mode: '0755'
+      
   - name: Audit Policy
     copy: 
       src: audit-policy.yaml
