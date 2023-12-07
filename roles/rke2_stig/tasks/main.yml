@@ -1,2 +1,7 @@
 ---
-#placeholder
+  - name: Audit Policy
+    copy: 
+      src: audit-policy.yaml
+      dest: /etc/rancher/rke2/audit-policy.yaml
+      owner: root
+      group: root
