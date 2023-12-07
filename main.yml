@@ -1,0 +1,8 @@
+---
+- name: Main playbook for Cloud Init
+  hosts: localhost
+  connection: local
+  become: true
+  gather_facts: false
+  tasks:
+  
