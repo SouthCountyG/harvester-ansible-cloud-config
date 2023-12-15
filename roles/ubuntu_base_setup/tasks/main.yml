@@ -1,0 +1,12 @@
+- name: create dir
+  ansible.builtin.file:
+    state: directory
+    path: /root/ansible-worked
+
+- name: see if it is cloning
+  ansible.builtin.copy:
+    src: cloud-init-test
+    dest: /root/ansible-worked
+    owner: root
+    group: root
+    mode: '0644'
