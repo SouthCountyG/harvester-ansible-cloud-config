@@ -1,0 +1,9 @@
+---
+- name: Main playbook for Rocky Linux
+  hosts: localhost
+  connection: local
+  become: true
+  gather_facts: false
+  tasks:
+  - include_role:
+      name: rocky_base_setup
